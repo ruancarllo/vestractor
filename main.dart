@@ -4,6 +4,8 @@ import 'dart:typed_data';
 import 'package:http/http.dart';
 import 'package:html/dom.dart';
 import 'package:yaml/yaml.dart';
+import 'package:pdf/pdf.dart';
+import 'package:pdf/widgets.dart' as pw;
 
 import 'core/categories.dart';
 import 'core/exports.dart';
@@ -136,7 +138,7 @@ void main(List<String> args) async {
 	
 				for (int q = 0; q < exam.questions.length; q++) {
 					final question = exam.questions[q];
-					var image = '"' + question.image.toString() + '"';
+					var image = stringifyURL(question.image);
 					
 					output.writeLine('id', question.id, 5, startsList: true);
 					output.writeLine('alternative', question.alternative, 5, addsList: true);
@@ -159,11 +161,11 @@ void main(List<String> args) async {
 		if (!globalDirectory.existsSync()) globalDirectory.createSync(recursive: true);
 		
 		yamlMap['universities'].forEach((university) async {
-			String universityPath = globalDirectory.path + '/' + university['name'];
+			String universityPath = globalDirectory.path + '/' + university['name'].toString();
 			Directory universityDirectory = Directory(universityPath)..createSync(recursive: true);
 			
 			university['exams'].forEach((exam) async {
-				String examPath = universityDirectory.path + '/' + exam['year'];
+				String examPath = universityDirectory.path + '/' + exam['year'].toString();
 				Directory examDirectory = Directory(examPath)..createSync(recursive: true);
 
 				if (exam['resolution'] == null) return;

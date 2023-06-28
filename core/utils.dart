@@ -14,7 +14,7 @@ Uri complementURL(Uri directory, String path) {
 	return Uri.parse(parts.join('/') + '/' + path);
 }
 
-String? stringifyURL(Uri? url) {
+String? stringifyURL(dynamic url) {
 	if (url != null) return '"' + url.toString() + '"';
 	else return null;
 }
