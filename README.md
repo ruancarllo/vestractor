@@ -12,16 +12,16 @@ Run Dart binaries from a command line, using your favorite shell, whose `$PATH` 
 
 Install the dependencies required by this software, whose versions are documented in the [pubspec.yaml](./pubspec.yaml) file, using the following command:
 
-```sh
-	dart pub get
+```shell
+dart pub get
 ```
 
 ## Usage
 
 With Dart installed and configured, run the [main.dart](./main.dart) file in your cli, followed by the necessary flags for each specific case of software operation.
 
-```sh
-	dart run main.dart # flags
+```shell
+dart run main.dart # flags
 ```
 
 ### Flags
@@ -34,6 +34,6 @@ With Dart installed and configured, run the [main.dart](./main.dart) file in you
 
 ### Example
 
-```sh
-	dart run main.dart --fetch --coverage=100 --save=yaml,json
+```shell
+dart run main.dart --fetch --coverage=100 --save=yaml,json
 ```
