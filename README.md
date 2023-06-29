@@ -1,12 +1,12 @@
 # Vestractor
 
-This software extracts resolution images of the main Brazilian entrance exams available on the ["Curso Objetivo"](https://www.curso-objetivo.br/vestibular/resolucao_comentada.aspx) platform.
+This software extracts resolution images of the main Brazilian entrance exams available on the ["Curso Objetivo"](https://www.curso-objetivo.br/vestibular/resolucao_comentada.aspx) platform, saving their urls in [YAML](https://wikipedia.org/wiki/YAML) or [JSON](https://wikipedia.org/wiki/JSON) files in an organized way.
 
 ## Prerequesites
 
 To use Vetractor, you need to have [Dart SDK](https://dart.dev/get-dart) `v2.18.0` installed on your computer.
 
-Run Dart binaries from a command line, using your favorite shell, whose `$PATH` variable should include Dart's `bin` directory.
+Run Dart binaries from a command line, using your favorite shell, whose `$PATH` variable should include Dart's `bin/` directory.
 
 ### Dependencies
 
@@ -36,4 +36,12 @@ dart run main.dart # flags
 
 ```shell
 dart run main.dart --fetch --coverage=100 --save=yaml,json
+```
+
+## Compilation
+
+Compile this software to an executable with the following command. Make sure there is a `dist/` directory in this project folder.
+
+```shell
+dart compile exe main.dart -o dist/vestractor
 ```

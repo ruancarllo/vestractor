@@ -7,3 +7,4 @@ replit.nix
 pubspec.lock
 
 lib/
+dist/
