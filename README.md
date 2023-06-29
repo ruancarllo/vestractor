@@ -4,7 +4,7 @@ This software extracts resolution images of the main Brazilian entrance exams av
 
 ## Prerequesites
 
-To use Vetractor, you need to have [Dart SDK](https://dart.dev/get-dart) `v2.18.0` installed on your computer.
+To use Vestractor, you need to have [Dart SDK](https://dart.dev/get-dart) `v2.18.0` installed on your computer.
 
 Run Dart binaries from a command line, using your favorite shell, whose `$PATH` variable should include Dart's `bin/` directory.
 
@@ -30,7 +30,7 @@ dart run main.dart # flags
 - `--save`: Saves extracted data in the [lib/rawdata](./lib/rawdata) directory. Accepts `yaml` and/or `json` parameters.
 
 ### Experimental flags
-- `--disperse` (**:warning: not fully implemented**): Temporarily stores the bytes of each PDF file of the extracted exams. Requires data to have been saved in yaml file.
+- `--disperse` **(:warning: not fully implemented)**: Temporarily stores the bytes of each PDF file of the extracted exams. Requires data to have been saved in yaml file.
 
 ### Example
 
