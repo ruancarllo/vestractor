@@ -126,7 +126,7 @@ void main(List<String> args) async {
 			output.writeLine('exams', null, 1, addsList: true);
 	
 			for (int e = 0; e < university.exams.length; e++) {
-				final exam = university.exams[u];
+				final exam = university.exams[e];
 				
 				var link = stringifyURL(exam.link);
 				var resolution = stringifyURL(exam.resolution);
