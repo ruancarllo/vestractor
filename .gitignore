@@ -1,10 +1,7 @@
-.git/
-.dart_tool/
-
-.replit
-replit.nix
-
+.dart_tool
 pubspec.lock
 
-lib/
-dist/
+.DS_Store
+
+data
+dist

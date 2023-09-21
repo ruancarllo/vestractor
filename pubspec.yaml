@@ -1,11 +1,9 @@
-name: vestractor
+name: Vestractor
 description: A software that extract solved entrance exams questions
 
 environment:
-  sdk: 2.18.0
+  sdk: ^3.1.0
 
 dependencies:
-  http: ^0.13.5
-  html: ^0.15.3
-  yaml: ^3.1.1
-  pdf: ^3.10.1
+  http: ^1.1.0
+  html: ^0.15.4
